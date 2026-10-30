@@ -49,7 +49,9 @@ On first launch Hermes downloads the transcription model (~2.2 GB) and, if llama
 CLI helpers for testing: `Hermes transcribe <file>`, `process <dir> [--no-push] [--vault <path>] [--no-claude]`,
 `polish <mode> "text"`, `numeros "text"`, `modelos`, `hooks on|off`.
 
-## Configure Notion
+## Configure Notion (beta)
+
+Notion and Slack compile and follow the public APIs, but have not yet been exercised against a real workspace. Issues welcome.
 
 1. Create an internal integration at <https://www.notion.so/my-integrations> and copy its token.
 2. Create (or pick) a database for meeting notes and **share it with the integration** (⋯ → Connections).
@@ -57,7 +59,7 @@ CLI helpers for testing: `Hermes transcribe <file>`, `process <dir> [--no-push] 
    or id. Each call becomes a page titled with the call title; the body has the summary, decisions, next steps (as
    to-dos) and the transcript. Re-processing a call (refine, name speakers) archives the old page and creates a new one.
 
-## Configure Slack
+## Configure Slack (beta)
 
 Settings → Slack → turn on, then either:
 - an **Incoming Webhook** URL (simplest; the channel is fixed by the webhook), or
